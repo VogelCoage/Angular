@@ -5,6 +5,6 @@
     {{ proveedor.id }}
 </div>
 <div>
-    <span>name: </span>
-    {{ proveedor.name }}
+    <label for="name">name: </label>
+    <input id="name" [(ngModel)]="proveedor.name" placeholder="name">
 </div>

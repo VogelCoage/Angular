@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Proveedor } from '../Proveedor';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-proveedores',

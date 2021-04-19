@@ -10,5 +10,23 @@
 
 <app-proveedor-detalle [proveedor]="selectedProveedor"></app-proveedor-detalle>
 
+<h2>Agregar un nuevo proveedor</h2>
+<div>
+    <p>
+    <label for="newProveedor-id">Id del proveedor: </label>
+    <input id="new-proveedor" placeholder="id" #proveedorId />
+    </p>
+    <p>
+    <label for="newProvedor-name">Nombre del Proveedor: </label>
+    <input id="newProvedor-name" placeholder="Nombre" #proveedorName />
+    </p>
+
+    
+
+    <button class="add-button" (click)="agregar(proveedorName.value, proveedorId.value); proveedorName.value=''; proveedorId.value=''">
+        Agregar un proveedor
+    </button>
+</div>
+
 
 

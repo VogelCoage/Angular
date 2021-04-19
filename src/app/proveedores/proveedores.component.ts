@@ -15,7 +15,7 @@ export class ProveedoresComponent implements OnInit {
     name: 'Ernesto'
   };
 
-  
+  selectedProveedor?: Proveedor;
   proveedores: Proveedor[];
 
   constructor(private datosProveedor:ProveedorService) { }
@@ -28,4 +28,7 @@ export class ProveedoresComponent implements OnInit {
     })
   }
 
+  onSelect(proveedor: Proveedor): void {
+    this.selectedProveedor = proveedor;
+  }
 }

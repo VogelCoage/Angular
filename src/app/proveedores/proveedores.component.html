@@ -1,25 +1,14 @@
 <h1>Proveedores</h1>
-<h2>Detalles {{ proveedor.name | uppercase }}</h2>
-<div>
-    <span>id: </span>
-    {{ proveedor.id }}
-</div>
 
 <ul class="proveedores">
     <li *ngFor="let proveedor of proveedores" 
-    [class.selected]="proveedor === selectedProveedor" (click) = "onSelect(proveedor)">
+    [class.selected]="proveedor === selectedProveedor"
+     (click) = "onSelect(proveedor)">
     <span class="badge">{{ proveedor.id }}</span> {{ proveedor.name }}
     </li>
 </ul>
 
-<div *ngIf="selectedProveedor">
-    <h2>{{ selectedProveedor.name | uppercase }} Details</h2>
-    <div>
-        <span>id: </span>{{ selectedProveedor.id }}
-    </div>
-    <div>
-        <label for="proveedor-name">Proveedor name: </label>
-        <input id="proveedor-name" [(ngModel)]="selectedProveedor.name" placeholder="name">
-    </div>
-</div>
+<app-proveedor-detalle [proveedor]="selectedProveedor"></app-proveedor-detalle>
+
+
 

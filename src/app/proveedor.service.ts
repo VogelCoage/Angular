@@ -9,7 +9,7 @@ import { Proveedor} from '../app/Proveedor';
 })
 export class ProveedorService {
 
-  proveedoresUrl = "http://localhost:8080/clientes";
+  proveedoresUrl = "http://127.0.0.1:8080/clientes";
 
   constructor(private http: HttpClient) { }
 

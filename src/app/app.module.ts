@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { ProveedoresComponent } from './proveedores/proveedores.component';
+import { ProveedorDetalleComponent } from './proveedor-detalle/proveedor-detalle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProveedoresComponent
+    ProveedoresComponent,
+    ProveedorDetalleComponent
   ],
   imports: [
     BrowserModule,

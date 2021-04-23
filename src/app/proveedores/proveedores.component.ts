@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { Proveedor } from '../Proveedor';
 import { FormsModule } from '@angular/forms';
 import { ProveedorService } from '../proveedor.service';
+import { RecursiveTemplateAstVisitor } from '@angular/compiler';
+import { MatCard } from '@angular/material/card';
 
 @Component({
   selector: 'app-proveedores',
@@ -23,11 +25,7 @@ export class ProveedoresComponent implements OnInit {
   constructor(private datosProveedor:ProveedorService) { }
 
   ngOnInit(): void {
-    this.datosProveedor.getProveedores().subscribe((data: any[]) =>
-    {
-      console.log(data);
-      this.proveedores = data;
-    })
+    this.carga();
   }
 
   onSelect(proveedor: Proveedor): void {
@@ -51,5 +49,14 @@ export class ProveedoresComponent implements OnInit {
     .subscribe(proveedor => {
       this.proveedores.push(proveedor);
     });
+  }
+
+  carga(): void
+  {
+    this.datosProveedor.getProveedores().subscribe((data: any[]) =>
+    {
+      console.log(data);
+      this.proveedores = data;
+    })
   }
 }

@@ -8,6 +8,17 @@ import { ProveedorDetalleComponent } from './proveedor-detalle/proveedor-detalle
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
+import { ProveedorService } from './proveedor.service';
+import { MatListModule } from '@angular/material/list';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from "@angular/material/table";
+
 
 @NgModule({
   declarations: [
@@ -20,9 +31,17 @@ import { MatCardModule } from '@angular/material/card';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    MatPaginatorModule,
+    MatProgressSpinnerModule,
+    MatSortModule,
+    MatTableModule
   ],
-  providers: [],
+  providers: [ProveedorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

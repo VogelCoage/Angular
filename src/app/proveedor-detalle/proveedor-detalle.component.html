@@ -1,9 +1,22 @@
-<div *ngIf="proveedor">
-    <h2>Detalles del proveedor: {{ proveedor.name | uppercase }}</h2>
-    <div>
-        <span>id: </span>{{ proveedor.id }}
-    </div>
-    <div>
-        <span>Proveedor name: </span>{{ proveedor.name }}
-    </div>
+<div *ngIf="proveedor">  
+    <h2>Edición de {{ proveedor.name | uppercase }}</h2>
+    <!-- <div><span>id: </span>{{proveedor.id}}</div> -->
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Id del Proveedor: </mat-label>
+      <input matInput id="proveedor-id" [(ngModel)]="proveedor.id" placeholder="id">
+    </mat-form-field>   
+  </div>
+  <div>
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre del Proveedor:</mat-label>
+      <input matInput id="proveedor-name" [(ngModel)]="proveedor.name" placeholder="name">
+    </mat-form-field>    
+  </div>
+  <div>    
+        <!-- (click) passes input value to agregar() and then clears the input -->
+        <button mat-icon-button color="primary">
+           <mat-icon>update</mat-icon> 
+       </button>       
+  </div>
 </div>
